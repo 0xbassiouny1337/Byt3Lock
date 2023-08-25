@@ -28,7 +28,7 @@ Byt3Lock's appearance and behavior resemble ransomware, which can cause fear and
 - Privacy Invasion: Installing this script on someone's computer without their consent could be used to monitor their activities.
 
 ## Usage
-1. Execute the `locker.py` script using Python.(u must use sudo)
+1. Execute the `locker.py` script using Python.(u must use sudo on linux )
 2. Enter the password "123" to unlock the program.
 3. Experiment with the script responsibly and with proper authorization.
 
