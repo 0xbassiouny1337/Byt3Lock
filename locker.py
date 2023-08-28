@@ -96,7 +96,7 @@ def on_exit():
 
 wind = Tk()
 
-wind.title("HELLOCKER")
+wind.title("Byt3Lock")
 
 wind.configure(bg="black")
 
